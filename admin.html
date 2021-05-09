@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="images/favicon.png" rel="shortcut icon">
+    <title>The Old Book - Book Lovers' Home</title>
+
+    <!--====== Google Font ======-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <!--====== Utility-Spacing ======-->
+    <link rel="stylesheet" href="css/utility.css">
+
+    <!--====== App ======-->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!--====== Symbol ======-->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!--====== JQuery ======-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--======= Chart =======-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi "></script>
+    <script src="js/admin.js"></script>
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar-container">
+        <div class="sidebar-brand">
+            <a class="brand-img" href="admin.html">
+            <img src="images/logo/logo-1.png" alt=""></a>
+        </div>
+
+        <div class="sidebar-menu">
+            <div class="admin-info">
+                <a href="admin.html">
+                    <img src="images/about/4.jpg" alt="">
+                    <h4>Admin</h4>
+                </a>
+
+            </div>
+            <ul>
+                <li>
+                    <a href="" class="active">
+                    <span class="las la-home"></span>
+                    <span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class="las la-handshake"></span>
+                    <span>Customers</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class="las la-scroll"></span>
+                    <span>Orders</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class="las la-dolly"></span>
+                    <span>Products</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class="las la-chalkboard"></span>
+                    <span>Chart</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class="las la-user-circle"></span>
+                    <span>Accounts</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class="las la-tasks"></span>
+                    <span>Tasks<span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="sidebar-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+            </h2>
+            
+            <form class="main-form">
+
+                <label for="main-search"></label>
+
+                <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Search">
+
+                <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button></form>
+                
+            <div class="admin-info-container">
+                <div>
+                    <h4>Admin</h4>
+                    <small>Super Admin</small>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <div class="card-single" id="card-customers">
+                    <div>
+                        <h1>54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users"></span>
+                    </div>
+                </div>
+
+                <div class="card-single" id="card-products">
+                    <div>
+                        <h1>54</h1>
+                        <span>Products</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard"></span>
+                    </div>
+                </div>
+
+                <div class="card-single" id="card-orders">
+                    <div>
+                        <h1>4</h1>
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <span class="las la-shopping-bag"></span>
+                    </div>
+                </div>
+
+                <div class="card-single" id="card-income">
+                    <div>
+                        <h1>$6k</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <span class="lab la-google-wallet"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-grid">
+                <div class="chart-left">
+                    <div class="chart-header">
+                        <h3>Income</h3>
+                    </div>
+                    <div id="curve_chart" class="chart" height="300px"></div>
+                </div>
+
+                <div class="chart-right">
+                    <div class="chart-header">
+                        <h3>Total books</h3>
+                    </div>
+                    <div id="top_x_div" class="chart" height="300px"></div>
+                </div>
+                
+            </div>
+
+            <div class="recent-orders">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Orders</h3>
+
+                        <button>See all 
+                        <span class="las la-arrow-right"></span></button>
+                    </div>
+                    
+                    <div class="card body">
+                        <div class="table-responsive">
+                            <table width="100%">
+                                <thead>
+                                    <tr>
+                                        <td>SKU</td>
+                                        <td>Invoice</td>
+                                        <td>Customer Name</td>
+                                        <td>Status</td>
+                                        <td>Amount</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>PO-01</td>
+                                        <td>
+                                            <a href="" class="inv">INV-01</a>
+                                        </td>
+                                        <td>Marry J.</td>
+                                        <td>Paid</td>
+                                        <td>$10000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PO-02</td>
+                                        <td>
+                                            <a href="" class="inv">INV-02</a>
+                                        </td>
+                                        <td>Cross S.</td>
+                                        <td>Overdue</td>
+                                        <td>$150.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PO-03</td>
+                                        <td>
+                                            <a href="" class="inv">INV-03</a>
+                                        </td>
+                                        <td>Megan S.</td>
+                                        <td>Overdue</td>
+                                        <td>$2100.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PO-04</td>
+                                        <td>
+                                            <a href="" class="inv">INV-04</a>
+                                        </td>
+                                        <td>Mellalin D.</td>
+                                        <td>Paid</td>
+                                        <td>$10000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PO-05</td>
+                                        <td>
+                                            <a href="" class="inv">INV-05</a>
+                                        </td>
+                                        <td>Eris V.</td>
+                                        <td>Overdue</td>
+                                        <td>$150.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+</body>
+</html>
